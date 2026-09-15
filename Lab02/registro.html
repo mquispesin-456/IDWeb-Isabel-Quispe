@@ -12,30 +12,44 @@
             <fieldset> 
                 <legend> Informaciòn personal </legend>
                 <div class="form-group">
-                    <! Nombre completo: text,required >
+                    <label for="nombre" class="form-label">Nombre completo: </label> 
+                    <input type ="nombre" id="nombre" name="nombre" class="form-input"
+                    required placeholder="Apellidos y nombres">
                 </div>
                 <div class="form-group">
-                    <! Fecha de Nacimiento: date, con min y max>
-
+                    <label for="nacimiento" class="form-label"> Fecha de nacimiento: </label> 
+                    <input type ="nacimiento" id="nacimiento" name="nacimiento" class="form-input"
+                    required placeholder="dia/mes/año">
                 </div>
                 <div class="form-group">
-                    <! Carrera profesional: text requires>
+                    <label for="carrera" class="form-label"> Carrera profesional: </label> 
+                    <input type ="carrera" id="carrera" name="carrera" class="form-input"
+                    required placeholder="Escuela profesional">
                 </div>
             </fieldset>
 
             <fieldset>
                 <legend>Informacion de la cuenta </legend>
                 <div class ="form-group">
-                    <! Codigo del estudiante: >
-                </div>
+                    <label for="cui" class="form-label"> Codigo del estudiante: </label> 
+                    <input type ="cui" id="cui" name="cui" class="form-input"
+                    required placeholder="numero de 8 digitos">                </div>
                 <div class="form-group">
                     <!Correo institucional: >
+                    <label for="email" class="form-label">Correo Institucional:</label>
+                    <input type="email" id="email" name="email" class="form-input"
+                    required placeholder="usuario@universidad.edu.pe">
                 </div>
                 <div class="form-group">
                     <! Contraseña: >
+                    <label for="key" class="form-label"> Contraseña: </label> 
+                    <input type ="key" id="key" name="key" class="form-input"
+                    required placeholder="8 digitos">   
                 </div>
                 <div class ="form-group">
-                    <! Turno: >
+                    <label for="turno" class="form-label"> Codigo del estudiante: </label> 
+                    <input type ="turno" id="turno" name="turno" class="form-input"
+                    required placeholder="numero de 8 digitos">   <! Turno: >
                 </div>
                 <div class ="form-group">
                     <! Aceptacion de terminos: >
