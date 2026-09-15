@@ -53,16 +53,30 @@
                     <! Contraseña: >
                     <label for="key" class="form-label"> Contraseña: </label> 
                     <input type ="password" id="key" name="key" class="form-input"
-                    minlength="8" pattern="(?=.*[A-Z])(?=.*[0-9]).{8,}}"
+                    minlength="8" pattern="(?=.*[A-Z])(?=.*[0-9]).{8,}"
                     required placeholder="Minimo 8 caracteres, 1 mayúscula y 1 número">   
                 </div>
                 <div class ="form-group">
-                    <label for="turno" class="form-label"> Codigo del estudiante: </label> 
-                    <input type ="turno" id="turno" name="turno" class="form-input"
-                    required placeholder="numero de 8 digitos">   <! Turno: >
+                    <span class=""form-label">Turno:</span>
+
+                    <input type="radio" id="turno-mañana" name="mañana" value="mañana" required>
+                    <label for="turno-mañana">Mañana</label>
+
+                    <input type="radio" id="turno-tarde" name="turno" value="tarde" required>
+                    <label for="turno-tarde">Tarde</label>
+
+                    <input type="radio" id="turno-noche" name="turno" value="noche" required>
+                    <label for="turno-noche">Noche</label>
                 </div>
                 <div class ="form-group">
-                    <! Aceptacion de terminos: >
+                    <input type="checkbox" id="terminos" name="terminos" value="aceptado" requires>
+                    <label for="terminos">Acepto los términos y condiciones</label>
+                </div>
+
+                <div class="form-group">
+                    <label for="comentarios" name="comentarios">Comentarios</label>
+                    <textarea id="comentarios" name="comentarios" class="form-input"
+                    rows="4" placeholder="Escriba alguna observación(opcional)"></textarea>
                 </div>
             </fieldset>
 
