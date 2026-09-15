@@ -13,18 +13,27 @@
                 <legend> Informaciòn personal </legend>
                 <div class="form-group">
                     <label for="nombre" class="form-label">Nombre completo: </label> 
-                    <input type ="nombre" id="nombre" name="nombre" class="form-input"
+                    <input type ="text" id="nombre" name="nombre" class="form-input"
                     required placeholder="Apellidos y nombres">
                 </div>
                 <div class="form-group">
                     <label for="nacimiento" class="form-label"> Fecha de nacimiento: </label> 
-                    <input type ="nacimiento" id="nacimiento" name="nacimiento" class="form-input"
+                    <input type ="date" id="nacimiento" name="nacimiento" class="form-input"
                     required placeholder="dia/mes/año">
                 </div>
                 <div class="form-group">
                     <label for="carrera" class="form-label"> Carrera profesional: </label> 
-                    <input type ="carrera" id="carrera" name="carrera" class="form-input"
-                    required placeholder="Escuela profesional">
+                    <select id="carrera" name="carrera" class="form-input" required>
+                        <option value="">---Selecciona tu carrera---</option>
+                        <option value="sistemas">Ingenieria de Sistemas</option>
+                        <option value="medicina">Medicina</option>
+                        <option value="enfermeria">Enfermería</option>
+                        <option value="electrónica">Ingeniería Electronica</option>
+                        <option value="civil">Ingeniería Civil</option>
+                        <option value="industrial">Ingeniería Industrial</option>
+                        <option value="mecanica">Ingeniería Mecánica</option>
+                        <option value="minas">Ingeniería de Minas</option>
+                    </select>
                 </div>
             </fieldset>
 
@@ -32,7 +41,7 @@
                 <legend>Informacion de la cuenta </legend>
                 <div class ="form-group">
                     <label for="cui" class="form-label"> Codigo del estudiante: </label> 
-                    <input type ="cui" id="cui" name="cui" class="form-input"
+                    <input type ="text" id="cui" name="cui" class="form-input" pattern="[0-9]{8}"
                     required placeholder="numero de 8 digitos">                </div>
                 <div class="form-group">
                     <!Correo institucional: >
@@ -43,8 +52,9 @@
                 <div class="form-group">
                     <! Contraseña: >
                     <label for="key" class="form-label"> Contraseña: </label> 
-                    <input type ="key" id="key" name="key" class="form-input"
-                    required placeholder="8 digitos">   
+                    <input type ="password" id="key" name="key" class="form-input"
+                    minlength="8" pattern="(?=.*[A-Z])(?=.*[0-9]).{8,}}"
+                    required placeholder="Minimo 8 caracteres, 1 mayúscula y 1 número">   
                 </div>
                 <div class ="form-group">
                     <label for="turno" class="form-label"> Codigo del estudiante: </label> 
