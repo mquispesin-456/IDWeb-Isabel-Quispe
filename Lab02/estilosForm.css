@@ -47,9 +47,22 @@ body{
 .form-input:focus {
     border-color:#3182ce;
     outline:none;
-    box-shadow:0 0 5px rgba (49,130,206, 0.5);
+    box-shadow:0 0 5px rgba(49,130,206, 0.5);
 
 }
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #3182ce;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
 button:hover {
     background-color: #2c5282;
     cursor:pointer;
