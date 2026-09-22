@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sistema de Gestiòn Acadèmica</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+        <title>Sistema de Gestión Académico</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="formatosistema.css">
 
     </head>
@@ -12,42 +12,48 @@
         <header>
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Sistema Acadèmico</a>
+                    <a class="navbar-brand" href="#">SISTEMA ACADÉMICO</a>
 
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="·navbarNav" aria-controls="navbarNav"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav"
                             aria-expanded="false" aria-label="Toggle navigation">
                      <span class="navbar-toggler-icon">
                         
                      </span>   
                     </button>
-                    <div class="collapase navbar-collapse" id="navbarNav">
-                        <u1 class="navbar-nav me-auto">
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto">
                             <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Cursos</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Noticias</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Registro</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
-                        </u1>
+                        </ul>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-outline-light" type="button">Iniciar Sesión</button>
+                            <button class="btn btn-light" type="button">Registrarse</button>
+                        </div>
                     </div>
-
-                </div>
+                </div>       
             
-            
-
-        <div class="d-flex gap-2">
-          <button class="btn btn-outline-light" type="button">Iniciar Sesión</button>
-          <button class="btn btn-light" type="button">Registrarse</button>
-        </div>
-
-  
+        </nav>
 </header>
-
        
-    </body>
-    <section class="catalogo">
+<section class="hero">
+    <div class="hero-texto">
+        <h1>Gestiona tu vida Acadèmica en un solo lugar</h1>
+        <p>Matriculas, notas, horarios y comunicaciòn con docentes, todo desde una sola plataforma</p>
+        <div class="hero-imagen">
+            <img src="IMG/Estudiantes.jpg" alt="Estudiantes usando la plataforma" class="img-fluid">
+        </div>
+    </div>
+</section>
+
+<section class="catalogo">
         <h2>Cursos Ofertados</h2>
+        <div class="card-grid">
         <div class="card">
+
             <div class="card-body">
                 <h5 class="card-title">Ingeniería de Software</h5>
                 <p class="card-text"> Fundamentos de desarrollo y gestión de proyectos de Software</p>
@@ -70,7 +76,7 @@
         </div>
         <div class="card">
             <div class="card-body">
-                <h5 class="card tittle">Desarrollo web</h5>
+                <h5 class="card-title">Desarrollo web</h5>
                 <p class="card-text">HTML, CSS, JavaScript y frameworks modernos</p>
             </div>
         </div>
@@ -87,22 +93,97 @@
                 <p class="card-text">Principios de seguridad informátca y protección de datos</p>
             </div>
         </div>
+        </div>
         
     </section>
-    <section class="noticias">
+
+    <section class="noticias py-5">
+        <h2 class="text-center mb-4">Noticias y Eventos</h2>
+        <div class="card-grid">
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class ="card title">Inicio del Semestre Academico 2026-II</h5>
+                    <p class="card-text">Conoce las fechas de matrícula y el cronograma de clases.</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalNoticia1">
+                        Mas información
+                    </button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Convocatoria de Becas</h5>
+                    <p class="card-text">Abierta la postulación a becas de excelencia academica</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalNoticia2">Mas información
+                    </button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Feria de Innovación Tecnológica</h5>
+                    <p class="card-text">Estudiantes de Ingeniería presentan proyectos desarrollados este año</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalNoticia3">
+                        Más información
+                    </button>
+                </div>
+            </div>
+        </div>
 
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"></script>
-<section class="hero">
-    <div class="hero texto">
-        <h1>Gestiona tu vida Acadèmica en un solo lugar</h1>
-        <p>Matriculas, notas, horarios y comunicaciòn con docentes, todo desde una sola plataforma</p>
-        <button class="hero-imagen">
-            <img src="IMG/Estudiantes.jpg" alt="Estudiantes usando la plataforma" class="img-fluid">
-        </button>
+    <div class="modal fade" id="modalNoticia1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Inicio del Semestre Académico 2026-II</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>La matricula se realizará del 28 de setiembre al 10 de octubre a trave´s del portal virtual. Las clases inician el 20 de octubre.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
     </div>
-</section>
 
+    <div class="modal fade" id="modalNoticia2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Convocatoria de Becas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Postula hasta el 30 de octubre en la oficina de Bienestar Universitario. Se otorgan becas de hasta el 100% de pensión.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-secondary" data-bs-dismiss="modal">Cerrar</button>
 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalNoticia3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Feria de Innovación Tecnológica</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    
+                </div>
+                <div class="modal-body">
+                    <p>El evento se realizará el 15 de noviembre en el auditorio principal, con proyectos de todas las escuelas de Ingienería.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>      
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
 
 </html>
