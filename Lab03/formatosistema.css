@@ -1,0 +1,38 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 3rem 1.5rem;
+
+}
+.hero-texto,
+.hero-imagen {
+    flex: 1;
+        
+}
+@media(min-width:992px) {
+    .hero {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1.5rem 3rem;
+}
+
+@media (min-width: 576px){
+    .card-grid{
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+@media (min-width: 992px) {
+    .card-grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
