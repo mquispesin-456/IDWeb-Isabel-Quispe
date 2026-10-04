@@ -45,6 +45,33 @@ function listarEstudiantes(req, res) {
   });
 }
 
+function crearEstudiante (req, res){
+  const chunks=[];
+  req.on('data', (chunk)=>{
+    chunks.push(chunk);
+  });
+  req.on('end',()=>{
+    const texto=Buffer.concat(chunks).toString('utf8');
+    const nuevo=JSON.parse(texto);
+     fs.readFile(RUTA_DATOS, 'utf8', (err, contenido) => {
+      if (err) {
+        return enviarJSON(res, 500, { message: 'Error al leer los datos' });
+      }
+
+      const lista = JSON.parse(contenido);
+      const registro = { id: lista.length + 1, nombre: nuevo.nombre, carrera: nuevo.carrera };
+      lista.push(registro);
+
+      fs.writeFile(RUTA_DATOS, JSON.stringify(lista, null, 2), (errEscritura) => {
+        if (errEscritura) {
+          return enviarJSON(res, 500, { message: 'Error al guardar' });
+        }
+        enviarJSON(res, 201, registro);
+      });
+    });
+  });
+}
+
 const server = http.createServer((req, res) => {
   console.log(`Petición recibida: ${req.method} ${req.url}`);
 
@@ -54,6 +81,10 @@ const server = http.createServer((req, res) => {
 
   if (req.method === 'GET' && !req.url.startsWith('/api/')) {
     return servirEstatico(req, res);
+  }
+
+  if (req.url === '/api/estudiantes' && req.method=== 'POST'){
+    return crearEstudiante(req, res);
   }
 
   enviarJSON(res, 404, { message: 'Recurso no encontrado' });
